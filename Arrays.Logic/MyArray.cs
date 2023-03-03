@@ -16,8 +16,14 @@ namespace Arrays.Logic
             _top = 0;
         }
 
+        /// <summary>
+        /// Indicates if the array is full
+        /// </summary>
         public bool IsFull => _top == N;
 
+        /// <summary>
+        /// Indicates if the array is empty
+        /// </summary>
         public bool IsEmpty => _top == 0;
 
         public int N { get; } // Physical size
