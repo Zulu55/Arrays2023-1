@@ -1,4 +1,5 @@
-﻿using System.Diagnostics.CodeAnalysis;
+﻿using System;
+using System.Diagnostics.CodeAnalysis;
 using System.Globalization;
 using System.Security.AccessControl;
 
@@ -97,7 +98,7 @@ namespace Arrays.Logic
 
         public void Fill(int minimun, int maximun)
         {
-            Random random = new();
+            var random = new Random();
             for (int i = 0; i < N; i++)
             {
                 _array[i] = random.Next(minimun, maximun);
@@ -194,7 +195,7 @@ namespace Arrays.Logic
 
         public MyArray GetMostRepeated()
         {
-            int[,] matrixCount = new int[_top,2];
+            int[,] matrixCount = new int[_top, 2];
             int topMatrix = FillMatrixCount(matrixCount);
             OrderMatrixCount(matrixCount, topMatrix);
             int repeatedCounter = GetRepeatedCounter(matrixCount, topMatrix);
