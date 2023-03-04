@@ -27,6 +27,9 @@ namespace Arrays.Logic
         /// </summary>
         public bool IsEmpty => _top == 0;
 
+        /// <summary>
+        /// Physical size of the array
+        /// </summary>
         public int N { get; } // Physical size
 
         public void Add(int number)
